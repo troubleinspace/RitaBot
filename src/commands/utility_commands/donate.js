@@ -3,14 +3,13 @@
 // -----------------
 
 // Codebeat:disable[LOC,ABC,BLOCK_NESTING,ARITY]
-
 const sendMessage = require("../../core/command.send");
 
 // ------------------------------
 // Donate varible command handalr
 // ------------------------------
 
-const donate = function donate (data)
+function donate (data)
 {
 
    const commandVariable1 = data.cmd.params.split(" ")[0].toLowerCase();
@@ -18,7 +17,7 @@ const donate = function donate (data)
    if (commandVariable1 === "github")
    {
 
-      console.log(`DEBUG: donate ${commandVariable1}`);
+      // console.log(`DEBUG: donate ${commandVariable1}`);
       {
 
          const outputgh =
@@ -40,7 +39,7 @@ const donate = function donate (data)
    else if (commandVariable1 === "oc")
    {
 
-      console.log(`DEBUG: donate ${commandVariable1}`);
+      // console.log(`DEBUG: donate ${commandVariable1}`);
       {
 
          const outputoc =
@@ -71,7 +70,7 @@ const donate = function donate (data)
 
    return sendMessage(data);
 
-};
+}
 
 // -------------
 // Command Code
